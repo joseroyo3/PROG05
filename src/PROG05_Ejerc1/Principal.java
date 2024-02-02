@@ -39,10 +39,10 @@ public class Principal {
 
             /* 
             En caso de que el vehiculo esté vacio, solo podrá seleccionar
-            la opcion 1
+            la opcion adicional que dará objeto vacio
              */
-            if (sinDatos) {
-                opcion = 1;
+            if (sinDatos && opcion != 1) {
+                opcion = 10;
             }
 
             switch (opcion) {
@@ -139,7 +139,7 @@ public class Principal {
 
                 // Nombre del propietario con su DNI
                 case 6:
-                    System.out.printf("El propietario es: %s y su DNI es %s", vehiculo.getPropietario(), vehiculo.getDNI());
+                    System.out.printf("El propietario es: %s y su DNI es %s\n", vehiculo.getPropietario(), vehiculo.getDNI());
                     break;
 
                 // El vehiculo mostrará la descripcion, con su matricula y sus km
@@ -155,6 +155,11 @@ public class Principal {
                 // Finalizará
                 case 9:
                     System.out.println("POWER OFF");
+                    break;
+
+                // Vehiculo sin datos
+                case 10:
+                    System.out.println("Vehiculo sin datos\n");
                     break;
 
                 default:

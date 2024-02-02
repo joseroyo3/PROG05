@@ -8,8 +8,9 @@ import java.time.LocalDate;
 import java.time.Period;
 
 /**
+ * Class Vehiculo
  *
- * @author joser
+ * @author Jose royo
  */
 public class Vehiculo {
 
